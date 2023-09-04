@@ -20,3 +20,14 @@ Use the hashmaps to do the comparison later (in terms of characters seen AND if 
 - Time complexity: $$O(n)$$
 
 - Space complexity: --
+
+# Two Sum
+
+## Approach
+Iterate over the array of given numbers. Add numbers with their indices to a hash map. Check if `target - number` is present in the hash map.
+If so, return the indices of both `number` and `target - number`.
+
+## Complexity
+- Time complexity: $$O(n)$$
+
+- Space complexity: $$O(n)$$
