@@ -1,5 +1,6 @@
 package com.leetcode.arraysandhashing;
 
+import java.lang.reflect.Array;
 import java.util.*;
 
 public class ArraysAndHashing {
@@ -52,7 +53,7 @@ public class ArraysAndHashing {
         return new int[0];
     }
 
-    public static List<List<String>> groupAnagrams(String[] strings) {
+    public static List<List<String>> badGroupAnagrams(String[] strings) {
         List<List<String>> list = new ArrayList<>();
         list.add(List.of(strings[0]));
 
@@ -73,5 +74,22 @@ public class ArraysAndHashing {
             }
         }
         return list;
+    }
+
+    public static List<List<String>> groupAnagrams(String[] strings) {
+        Map<String, List<String>> map = new HashMap<>();
+        Arrays.stream(strings).forEach(s -> {
+            char[] chars = s.toCharArray();
+            Arrays.sort(chars);
+            String sortedString = new String(chars);
+            if(map.containsKey(sortedString)) {
+                List<String> listToAdd = new ArrayList<>(map.get(sortedString));
+                listToAdd.add(s);
+                map.replace(sortedString, listToAdd);
+            } else {
+                map.put(sortedString, List.of(s));
+            }
+        });
+        return new ArrayList<>(map.values());
     }
 }

@@ -19,7 +19,7 @@ Use the hashmaps to do the comparison later (in terms of characters seen AND if 
 ## Complexity
 - Time complexity: $$O(n)$$
 
-- Space complexity: --
+- Space complexity: 
 
 # Two Sum
 
@@ -31,3 +31,15 @@ If so, return the indices of both `number` and `target - number`.
 - Time complexity: $$O(n)$$
 
 - Space complexity: $$O(n)$$
+
+# Group Anagrams
+
+## Approach
+Iterate through the array of provided strings. Sort them and check if they are present in an existing map as keys.
+
+Add sorted strings as key in a map. Add all the anagrams as a list of values.
+
+## Complexity
+- Time complexity: 
+
+- Space complexity: 
