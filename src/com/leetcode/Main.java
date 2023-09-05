@@ -10,5 +10,6 @@ public class Main {
         out.println(containsDuplicate(new int[]{1, 2, 3}));
         out.println(isAnagram("aacc", "ccac"));
         out.println(Arrays.toString(twoSum(new int[]{1, 2, 3, 4}, 7)));
+        out.println(groupAnagrams(new String[]{"eat","tea","tan","ate","nat","bat"}));
     }
 }
