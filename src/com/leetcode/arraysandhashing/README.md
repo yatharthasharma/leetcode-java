@@ -43,3 +43,14 @@ Add sorted strings as key in a map. Add all the anagrams as a list of values.
 - Time complexity: 
 
 - Space complexity: 
+
+
+# Product of array except self
+
+## Approach
+To avoid an o(n2) time complexity solution, calculating prefix and suffix products for each index, then multiplying them in the final loop.
+
+## Complexity
+- Time complexity: $$O(n)$$
+
+- Space complexity: $$O(n)$$
