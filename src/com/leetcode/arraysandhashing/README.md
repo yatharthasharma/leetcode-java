@@ -54,3 +54,10 @@ To avoid an o(n2) time complexity solution, calculating prefix and suffix produc
 - Time complexity: $$O(n)$$
 
 - Space complexity: $$O(n)$$
+
+## Improvement (Separate method)
+Space complexity is O(1) if not including the output array. Avoided using prefix and suffix arrays.
+
+- Time complexity: $$O(n)$$
+
+- Space complexity: $$O(1)$$
