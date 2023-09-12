@@ -15,31 +15,24 @@ public class LongestConsecutiveSequence {
             numsSet.add(num);
         }
 
-        Set<Integer> largestSet = new HashSet<>();
-
-        Set<Integer> startOfSequences = new HashSet<>();
+        int longestLength = 1;
 
         for (int num : numsSet) {
-            if (!numsSet.contains(num - 1) && numsSet.contains(num + 1)) {
-                startOfSequences.add(num);
+            if (!numsSet.contains(num - 1)) {
+                int currentLength = 1;
+                int currentNum = num + 1;
+                while (numsSet.contains(currentNum)) {
+                    currentLength++;
+                    if (currentLength > longestLength) {
+                        longestLength = currentLength;
+                    }
+                    if (!numsSet.contains(currentNum + 1)) {
+                        break;
+                    }
+                    currentNum++;
+                }
             }
         }
-
-        for (int num : startOfSequences) {
-            Set<Integer> currentSequenceSet = new HashSet<>();
-            currentSequenceSet.add(num);
-            int currentNum = num + 1;
-            while (numsSet.contains(currentNum - 1)) {
-                currentSequenceSet.add(currentNum);
-                if (largestSet.size() < currentSequenceSet.size()) {
-                    largestSet = currentSequenceSet;
-                }
-                if(!numsSet.contains(currentNum+1)) {
-                    break;
-                }
-                currentNum++;
-            }
-        }
-        return Math.max(largestSet.size(), 1);
+        return longestLength;
     }
 }
