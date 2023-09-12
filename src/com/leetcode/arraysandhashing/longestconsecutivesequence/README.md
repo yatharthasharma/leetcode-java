@@ -3,7 +3,7 @@ Store ints in a set that are beginning of a new sequence. Try to create the larg
 
 # Complexity
 - Time complexity:
-  $$O(n^2)$$
+  $$O(n)$$
 
 - Space complexity:
-  $$O(n^2)$$
+  $$O(n)$$
