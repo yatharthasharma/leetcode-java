@@ -8,6 +8,6 @@ any of these ways, I chose to do it horizontally - you can see this in the code 
 ```&& !gridSetRow3To5.add(board[i][j])```. If this was laid out vertically then we would be using ```[j][i]``` indices instead.).
 
 ## Complexity
-- Time complexity: $$O(n2)$$
+- Time complexity: $O(n^2)$
 
-- Space complexity: $$O(n2)$$
+- Space complexity: $O(n^2)$
