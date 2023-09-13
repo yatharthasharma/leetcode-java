@@ -1,6 +1,7 @@
 package com.leetcode;
 
 import com.leetcode.stacks.minstack.MinStack;
+import com.leetcode.stacks.reversepolishnotation.ReversePolishNotation;
 
 import java.util.Arrays;
 
@@ -24,9 +25,10 @@ public class Main {
             {'.', '.', '.', '.', '5', '.', '.', '2', '.'}
     };
 
-    private static final MinStack minStack = new MinStack();
+    private static final ReversePolishNotation rpn = new ReversePolishNotation();
 
-    public static void main(String[] args) {
+    private static void pastProblemOperations() {
+        final MinStack minStack = new MinStack();
         out.println(containsDuplicate(new int[]{1, 2, 3}));
         out.println(isAnagram("aacc", "ccac"));
         out.println(Arrays.toString(twoSum(new int[]{1, 2, 3, 4}, 7)));
@@ -42,5 +44,10 @@ public class Main {
         minStack.pop();
         out.println(minStack.top());
         out.println(minStack.getMin());
+    }
+
+    public static void main(String[] args) {
+        pastProblemOperations();
+        out.println(rpn.evalRPN(new String[]{"2","1","+","3","*"}));
     }
 }
