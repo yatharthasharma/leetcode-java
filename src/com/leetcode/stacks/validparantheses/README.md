@@ -8,7 +8,7 @@ that means the corresponding closing braces were not present, so return false. O
 
 # Complexity
 - Time complexity:
-  $O(n)$ (map is of constant size - the only for loop is iterating through the characters)
+  $O(n)$
 
 - Space complexity:
-  $O(n)$ (map is of constant size, stack size will increase linearly based on the input array size)
+  $O(n)$
