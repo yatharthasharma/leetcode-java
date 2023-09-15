@@ -1,4 +1,4 @@
-package com.leetcode.validpalindrome;
+package com.leetcode.twopointers.validpalindrome;
 
 import java.util.Stack;
 
