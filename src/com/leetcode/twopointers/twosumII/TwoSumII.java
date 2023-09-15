@@ -2,15 +2,17 @@ package com.leetcode.twopointers.twosumII;
 
 public class TwoSumII {
     public static int[] twoSum(int[] numbers, int target) {
-        for (int i = 0; i < numbers.length; i++) {
-            for (int j = numbers.length - 1; j >= 0; j--) {
-                if (numbers[i] + numbers[j] == target) {
-                    return new int[]{i + 1, j + 1};
-                } else if (numbers[i] + numbers[j] < target) {
-                    break;
-                }
+        int p1 = 0;
+        int p2 = numbers.length - 1;
+        while (p1 < p2) {
+            if (numbers[p1] + numbers[p2] == target) {
+                return new int[]{p1 + 1, p2 + 2};
+            }
+            else if (numbers[p1] + numbers[p2] > target) {
+                p2--;
+            } else {
+                p1++;
             }
         }
-        return new int[0];
     }
 }

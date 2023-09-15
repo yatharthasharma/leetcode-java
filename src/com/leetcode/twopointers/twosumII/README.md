@@ -5,7 +5,7 @@ sum is lower than target, increase the left hand side pointer.
 
 # Complexity
 - Time complexity:
-  $O(n^2)$
+  $O(n)$
 
 - Space complexity:
   $O(1)$
