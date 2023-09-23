@@ -10,9 +10,8 @@ public class BinarySearch {
                 return index;
             } else if (nums[index] > target) {
                 if (p2 == index) {
-                    // this is for cases where only 1 or 2 elements left
-                    // index can only ever be equals to p2 if elements in the array = 1 or 2. in that case, decrease the size
-                    // of p2 to reduce search size to 1 length of array or to be able to break out of for loop as
+                    // this is for cases where only 1 element left
+                    // in that case, decrease the size of p2 to be able to break out of for loop as
                     // element is still not equal to target
                     p2--;
                 } else {
