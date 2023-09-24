@@ -9,23 +9,9 @@ public class BinarySearch {
             if (nums[index] == target) {
                 return index;
             } else if (nums[index] > target) {
-                if (p2 == index) {
-                    // this is for cases where only 1 element left
-                    // in that case, decrease the size of p2 to be able to break out of for loop as
-                    // element is still not equal to target
-                    p2--;
-                } else {
-                    p2 = index;
-                }
+                p2 = index - 1;
             } else {
-                if (p1 == index) {
-                    // this is for cases where only 1 or 2 elements left
-                    // in case of 2 elements, it reduces the size to element on p2 index.
-                    // in case of 1 element, it will help us break out of for loop if the element is still not equal to target
-                    p1++;
-                } else {
-                    p1 = index;
-                }
+                p1 = index + 1;
             }
         }
         return -1;
