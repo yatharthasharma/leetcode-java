@@ -8,6 +8,7 @@ public class Sqrt {
         int p2 = x;
         int previousMax = 0;
         while (p1 <= p2) {
+            // addition is done this way because of the same reason mentioned in GuessGameI solution - int overflow problem
             long mid = (p1 + p2) / 2;
             if(mid * mid == x) {
                 return (int) mid;
