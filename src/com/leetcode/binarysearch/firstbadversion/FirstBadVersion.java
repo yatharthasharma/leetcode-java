@@ -1,6 +1,13 @@
 package com.leetcode.binarysearch.firstbadversion;
 
 public class FirstBadVersion {
+    /**
+     * Provided API by Leetcode. Added here for test purposes.
+     *
+     * @param version numbered version to check if it is bad
+     *
+     * @return boolean value to reflect the state of version (bad or good)
+     */
     static boolean isBadVersion(int version) {
         return version == 4 || version == 5;
     }
