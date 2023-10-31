@@ -1,10 +1,10 @@
 # Approach
-Keep a track of the head in $MyLinkedList$ class.
-Create a static class $ListNode$ that stores a reference to the next node in the list and the value.
+Iterate through the linked list and add all the nodes to a hashset. If a value is repeated, the list is cyclic. If there
+is a null value, that means its the end of an acyclic list.
 
 # Complexity
 - Time complexity:
-  $O(n)$ for delete/add/get value on a given index
+  $O(n)$
 
 - Space complexity:
-  $O(1)$
+  $O(n)$
